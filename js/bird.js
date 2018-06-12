@@ -69,7 +69,7 @@
 		
         // countdown setup start
         $("#countdown").countdown({
-            date: "21 June 2018 12:00:00", // countdown target date settings
+            date: "22 June 2018 12:00:00", // countdown target date settings
             format: "on"
         }, function() {
             // callback function
