@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Cek Lokasi Geolocation HTML5</title>
+</head>
+ 
+<body>
+<center>
+<p>Cek lokasi anda! >> <button onclick="getLocation()">Cek</button></p>
+ 
+ 
+<p id="tampilkan"></p>
+</center>
+<script>
+var view = document.getElementById("tampilkan");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        view.innerHTML = "Yah browsernya ngga support Geolocation bro!";
+    }
+}
+ function showPosition(position) {
+    view.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+ }
+ 
+ function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            view.innerHTML = "Yah, mau deteksi lokasi tapi ga boleh :("
+            break;
+        case error.POSITION_UNAVAILABLE:
+            view.innerHTML = "Yah, Info lokasimu nggak bisa ditemukan nih"
+            break;
+        case error.TIMEOUT:
+            view.innerHTML = "Requestnya timeout bro"
+            break;
+        case error.UNKNOWN_ERROR:
+            view.innerHTML = "An unknown error occurred."
+            break;
+    }
+ }
+</script>
+</body>
+</html>
