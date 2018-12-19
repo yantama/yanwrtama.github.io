@@ -72,7 +72,7 @@
               <br>      
               <br>
               <div class="form-group">
-              <center> <style="color:Black;" onclick="getLocation()">  [ Ambil Titik Koordinat ] </a></center>
+              <center> <a href="#" style="color:Black;" onclick="getLocation()">  [ Ambil Titik Koordinat ] </a></center>
               
               <br>
 <p id="demo"></p>
@@ -97,6 +97,8 @@ function showPosition(position) {
   
  
 
+             <br>
+<br>
           </form>
         </div>
       </div>
@@ -105,6 +107,11 @@ function showPosition(position) {
     <footer>
     <p>Copyright &copy; PT.Mitra Pembayan Elektronik</p>
     </footer>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+      </script>
     <!-- Jquery JS-->
      <script src="config/colorlib-regform-4/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
